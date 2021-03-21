@@ -22,3 +22,8 @@ var cache = new Cache<string>(2, opt => { opt.OnItemEvicted = n => /* Handling o
 
 
 ```
+
+## Extension Points
+
+- The implementation for locking is basic and it can be done using more effective lock such as ReaderWriterLockSlim. 
+- Having a GetOrAdd method (sync or async) will be helpful. 
